@@ -1,0 +1,279 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f7f2e8;
+    color: #2f2418;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgba(20, 15, 8, 0.35);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 28px;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.nav-links a:hover {
+    color: #d6a33d;
+}
+.hero {
+    position: relative;
+    min-height: 100vh;
+    background:
+        linear-gradient(
+            90deg,
+            rgba(18, 10, 3, 0.78) 0%,
+            rgba(18, 10, 3, 0.55) 38%,
+            rgba(18, 10, 3, 0.25) 100%
+        ),
+        url("images/hero.png");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 130px 8% 70px;
+    overflow: hidden;
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+}
+.hero-content {
+    max-width: 560px;
+    color: white;
+    opacity: 0;
+    transform: translateY(45px);
+    transition: 1.2s ease;
+}
+
+.hero-content.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 68px;
+    line-height: 0.95;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    margin-bottom: 32px;
+}
+
+.subtitle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 25px;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.pillars {
+    color: #d6a33d;
+    font-size: 19px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 26px;
+}
+
+.intro {
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 520px;
+    margin-bottom: 38px;
+}
+
+.button {
+    display: inline-block;
+    background: #b37a2c;
+    color: white;
+    text-decoration: none;
+    padding: 16px 36px;
+    border-radius: 40px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    transition: 0.3s ease;
+}
+
+.button:hover {
+    background: #d6a33d;
+    transform: translateY(-3px);
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    padding: 100px 8%;
+    text-align: center;
+}
+
+.service-card {
+    background: #fdfbf7;
+    padding: 48px 36px;
+    border-radius: 22px;
+    transition: all 0.35s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 25px 55px rgba(0, 0, 0, 0.12);
+}
+
+.icon {
+    font-size: 42px;
+    color: #704818;
+    margin-bottom: 22px;
+}
+
+.service-card h2 {
+    color: #704818;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    margin-bottom: 18px;
+}
+
+.service-card p {
+    line-height: 1.7;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+.service-card a {
+    color: #9b681f;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 35px;
+    background: #2f2418;
+    color: #f7f2e8;
+}
+
+@media (max-width: 800px) {
+    nav {
+        padding: 22px 26px;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .hero {
+        padding: 150px 28px 80px;
+        align-items: flex-end;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .pillars {
+        font-size: 15px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
+        padding: 70px 24px;
+    }
+    .hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+@media (max-width: 600px) {
+    nav {
+        padding: 16px 22px;
+        background: rgba(20, 15, 8, 0.65);
+    }
+
+    .logo img {
+        height: 48px;
+    }
+
+    .hero {
+        min-height: 100vh;
+        padding: 130px 24px 70px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+        letter-spacing: 2px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+    }
+
+    .pillars {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .intro {
+        font-size: 16px;
+    }
+
+    .button {
+        padding: 14px 28px;
+        font-size: 14px;
+    }
+
+    .services {
+        padding: 65px 22px;
+        gap: 24px;
+    }
+
+    .service-card {
+        padding: 38px 28px;
+    }
+}
+}
